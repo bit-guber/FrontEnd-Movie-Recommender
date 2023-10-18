@@ -1,0 +1,38 @@
+.moviePoster {
+    height: 200px;
+  width: 200px;
+
+  /* object-fit: cover; */
+ /* -webkit-transform:scale(0.5);
+    -moz-transform:scale(0.5);
+    -ms-transform:scale(0.5);
+    transform:scale(0.5); */
+    /* display: flex; */
+    /* overflow: hidden; */
+  /* object-position: top 100%; */
+  /* position: absolute; */
+    /* margin-bottom: -50px; */
+}
+
+.ViGrid{
+    display: grid;
+    grid-auto-flow: column dense;
+    /* justify-content: center;
+    align-items: center; */
+    overflow: auto;
+    grid-template-columns: repeat(auto-fill,200px);
+    /* height: 150px; */
+    
+    /* -webkit-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    -ms-transform:scale(0.9);
+    transform:scale(0.9); */
+}
+
+.ReGrid{
+    padding-left: 3%;
+    grid-auto-flow: row dense;
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, 200px);
+    overflow: auto;
+}
