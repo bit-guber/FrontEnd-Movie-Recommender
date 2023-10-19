@@ -27,7 +27,7 @@ function RecommendedMovies(){
             )
             .catch( error=> console.log("problem recommender", error) ) 
     }  
-    , [options.viewedMovieList]);
+    , [ ()=>options.viewedMovieList.length ]);
 
 
     return <div className="ReGrid">
