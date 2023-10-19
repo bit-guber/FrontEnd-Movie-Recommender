@@ -13,6 +13,7 @@ export default function MovieCard( props: { movie_id: any; viewed: any} ){
         if (!viewed){
             options.viewedMovieList.push( movie_id );
             viewed = true;
+            console.log( movie_id, "view state", options.viewedMovieList )
         }
     }
     useEffect(  ()=>{
