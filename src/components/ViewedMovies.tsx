@@ -8,7 +8,7 @@ import MovieCard from "./MovieCard";
 let viewedMoiveList = options.viewedMovieList;
 function ViewedMovies(){
     return <div className="ViGrid">
-        { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} key={index} /> ) }
+        { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
     </div>
 }
 

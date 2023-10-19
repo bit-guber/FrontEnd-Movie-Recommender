@@ -31,7 +31,7 @@ function RecommendedMovies(){
 
 
     return <div className="ReGrid">
-        { MovieList.map( (object, index)=>  <MovieCard movie_id={object} key={index} />  ) }
+        { MovieList.map( (object, index)=>  <MovieCard movie_id={object} viewed={false} key={index} />  ) }
             </div>
 }
 export default RecommendedMovies
