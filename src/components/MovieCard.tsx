@@ -4,9 +4,17 @@ import "./inner.css"
 import options from "./helper";
 
 
-export default function MovieCard( props: { movie_id: any; } ){
+
+export default function MovieCard( props: { movie_id: any; viewed: any} ){
     const movie_id = props.movie_id;
     let [poster, setposter] = useState("https://img.freepik.com/free-vector/loading-circles-blue-gradient_78370-2646.jpg?t=st=1697631043~exp=1697631643~hmac=d09c6a37786242f531c13b7ff8c45b8418aae500cec53396ffe87c514239ec70");
+    let viewed:boolean = props.viewed;
+    function update_view(){
+        if (!viewed){
+            options.viewedMovieList.push( movie_id );
+            viewed = true;
+        }
+    }
     useEffect(  ()=>{
         fetch(`https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`, options.auth_headers)
             .then(Response=>Response.json())
@@ -16,8 +24,8 @@ export default function MovieCard( props: { movie_id: any; } ){
                 }
             )
             .catch( error=> console.log(movie_id, "problem", error) ) 
-    }  )
+    }  , [])
     return <div className="card moviePoster" >
-        <img src={poster} className="card-img-top" />
+        <img src={poster} className="card-img-top" onClick={update_view} />
     </div>
 }
