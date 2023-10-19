@@ -14,8 +14,7 @@ function RecommendedMovies(){
             body:  JSON.stringify({viewed: options.viewedMovieList}),
             headers: {
                 'Content-Type': 'application/json',
-                'accept': 'application/json',
-                'Access-Control-Allow-Origin': "*"
+                'accept': 'application/json'
             }
             }
         console.log( "request json", body_section );
