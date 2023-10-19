@@ -11,7 +11,7 @@ function RecommendedMovies(){
     useEffect(  ()=>{
         let body_section = { 
             method: "POST",
-            body:  {'viewed': options.viewedMovieList},
+            body:  JSON.stringify({viewed: options.viewedMovieList}),
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'application/json',
