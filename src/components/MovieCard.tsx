@@ -4,7 +4,7 @@ import "./inner.css"
 import options from "./helper";
 
 
-export default function MovieCard( props ){
+export default function MovieCard( props: { movie_id: any; } ){
     const movie_id = props.movie_id;
     let [poster, setposter] = useState("https://img.freepik.com/free-vector/loading-circles-blue-gradient_78370-2646.jpg?t=st=1697631043~exp=1697631643~hmac=d09c6a37786242f531c13b7ff8c45b8418aae500cec53396ffe87c514239ec70");
     useEffect(  ()=>{
