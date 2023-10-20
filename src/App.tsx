@@ -1,7 +1,7 @@
 // import options from "./helper"
 import Describe from "./components/Describe";
-import RecommendedMovies from "./components/RecommendedMovies";
-import ViewedMovies from "./components/ViewedMovies";
+// import RecommendedMovies from "./components/RecommendedMovies";
+// import ViewedMovies from "./components/ViewedMovies";
 
 // const temp  = "dark"
 // const [Theme, setTheme] = useState( 0 );
