@@ -6,7 +6,7 @@ import "./inner.css";
 // const MovieCard = getMovieCard( "../assets/poster_0114709.jpg" )
 // const poster = 'https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_QL75_UX380_CR0,2,380,562_.jpg'
 
-function RecommendedMovies(){
+function RecommendedMovies( props:{viewedmovieState:boolean, updateList:Function } ){
     console.log( "recommended movies run..." );
     let [MovieList, setMovieList] = useState( [] );
     useEffect(  ()=>{
@@ -32,7 +32,7 @@ function RecommendedMovies(){
 
 
     return <div className="ReGrid">
-        { MovieList.map( (object, index)=>  <MovieCard movie_id={object} viewed={false} key={index} />  ) }
+        { MovieList.map( (object, index)=>  <MovieCard movie_id={object} viewed={false} updateList={props.updateList} key={index} />  ) }
             </div>
 }
 export default RecommendedMovies
