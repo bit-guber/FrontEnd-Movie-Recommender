@@ -7,16 +7,18 @@ import "./inner.css";
 // const poster = 'https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_QL75_UX380_CR0,2,380,562_.jpg'
 
 function RecommendedMovies( props:{viewedmovieState:boolean, updateList:Function } ){
-    console.log( "recommended movies run..." );
+    console.log( "recommended movies run...", options.ViewedMovieList );
     let [MovieList, setMovieList] = useState( [] );
     useEffect(  ()=>{
         let body_section = { 
             method: "POST",
+            
             body:  JSON.stringify({viewed: options.ViewedMovieList}),
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'application/json'
-            }
+            },
+
             }
         console.log( "request json", body_section );
         fetch(options.api_url, body_section )
