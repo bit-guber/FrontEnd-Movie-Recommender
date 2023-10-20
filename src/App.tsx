@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Describe from "./components/Describe";
 import RecommendedMovies from "./components/RecommendedMovies";
 import ViewedMovies from "./components/ViewedMovies";
-import options from "./components/helper";
+// import options from "./components/helper";
 
 // const temp  = "dark"
 // const [Theme, setTheme] = useState( 0 );
