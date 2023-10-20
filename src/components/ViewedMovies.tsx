@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import options from "./helper"
 import "./inner.css"
 import MovieCard from "./MovieCard";
 // import { Component, ReactNode } from "react";
@@ -16,7 +15,7 @@ function ViewedMovies(){
 
     // useEffect( ()=> console.log( import.meta.env.VITE_ViewedMovieList, "in viewed movies " ) );
     return <div className="ViGrid">
-        { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
+        { viewedMoiveList.map( (object:string, index:number)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
     </div>
 }
 
