@@ -16,7 +16,7 @@ function ViewedMovies(){
 
     // useEffect( ()=> console.log( import.meta.env.VITE_ViewedMovieList, "in viewed movies " ) );
     return <div className="ViGrid">
-        { viewedMoiveList.map( (object:string, index:number)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
+        { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
     </div>
 }
 
