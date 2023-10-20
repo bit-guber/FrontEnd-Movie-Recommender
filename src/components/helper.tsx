@@ -1,4 +1,13 @@
-const options = {
+const options:{
+    auth_headers: {
+    method: string,
+    headers: {
+        accept: string,
+        Authorization: string }},
+    viewedMovieList: string[],
+    ListAmount : number,
+    api_url: string
+} = {
     auth_headers: {
         method: 'GET',
         headers: {
