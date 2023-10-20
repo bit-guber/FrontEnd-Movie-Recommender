@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import "./inner.css"
 import MovieCard from "./MovieCard";
 import options from "./helper";
@@ -9,14 +9,14 @@ import options from "./helper";
 
 function ViewedMovies(){
     console.log( "viewed movies run..." );
-    let [viewedMoiveList , setMovieList] = useState(options.ViewedMovieList);
-    useEffect( ()=>{
-        setMovieList( options.ViewedMovieList );
-    }, [ options.ViewedMovieList ] );
+    // let [viewedMoiveList , setMovieList] = useState(options.ViewedMovieList);
+    // useEffect( ()=>{
+    //     setMovieList( options.ViewedMovieList );
+    // }, [  ] );
 
     // useEffect( ()=> console.log( import.meta.env.VITE_ViewedMovieList, "in viewed movies " ) );
     return <div className="ViGrid">
-        { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
+        { options.ViewedMovieList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
     </div>
 }
 
