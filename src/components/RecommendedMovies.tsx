@@ -27,8 +27,7 @@ function RecommendedMovies( props:{viewedmovieState:boolean, updateList:Function
                 }
             )
             .catch( error=> console.log("problem recommender", error) ) 
-    }  
-    , []);
+    }, [props.viewedmovieState] );
 
 
     return <div className="ReGrid">
