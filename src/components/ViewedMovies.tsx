@@ -12,7 +12,7 @@ function ViewedMovies(){
     let [viewedMoiveList , setMovieList] = useState(options.viewedMovieList);
     useEffect( ()=>{
         setMovieList( viewedMoiveList );
-    }, [ options.ListAmount ] );
+    }, [ import.meta.env.VITE_ViewedMovieList ] );
 
     useEffect( ()=> console.log( options.ListAmount, "in viewed movies " ) );
     return <div className="ViGrid">
