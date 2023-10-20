@@ -12,7 +12,7 @@ function RecommendedMovies(){
     useEffect(  ()=>{
         let body_section = { 
             method: "POST",
-            body:  JSON.stringify({viewed: import.meta.env.VITE_ViewedMovieList}),
+            body:  JSON.stringify({viewed: options.ViewedMovieList}),
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'application/json'
@@ -28,7 +28,7 @@ function RecommendedMovies(){
             )
             .catch( error=> console.log("problem recommender", error) ) 
     }  
-    , [[ import.meta.env.VITE_ViewedMovieList ]]);
+    , [options.ViewedMovieList ]);
 
 
     return <div className="ReGrid">

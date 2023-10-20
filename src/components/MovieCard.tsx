@@ -11,9 +11,12 @@ export default function MovieCard( props: { movie_id: string; viewed: any} ){
     let viewed:boolean = props.viewed;
     function update_view(){
         if (!viewed){
-            import.meta.env.VITE_ViewedMovieList.push( movie_id );
+            options.ViewedMovieList.push( movie_id );
             viewed = true;
-            console.log( movie_id, "view state", import.meta.env.VITE_ViewedMovieList )
+            console.log( movie_id, "view state", options.ViewedMovieList )
+        }
+        else{
+            console.log( options.ViewedMovieList, 'until..' );
         }
     }
     useEffect(  ()=>{

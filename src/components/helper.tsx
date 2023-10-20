@@ -5,6 +5,7 @@ const options:{
         accept: string,
         Authorization: string }},
     api_url: string
+    ViewedMovieList: string[]
 } = {
     auth_headers: {
         method: 'GET',
@@ -14,8 +15,8 @@ const options:{
         }
     },
     
-    api_url: "https://recommender-api-vercel.vercel.app/get-list"
-
+    api_url: "https://recommender-api-vercel.vercel.app/get-list",
+    ViewedMovieList: [ '5' ]
 };
 
 export default options
