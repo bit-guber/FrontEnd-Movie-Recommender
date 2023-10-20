@@ -8,6 +8,7 @@ import MovieCard from "./MovieCard";
 
 
 function ViewedMovies(){
+    console.log( "viewed movies run..." );
     let [viewedMoiveList , setMovieList] = useState(options.viewedMovieList);
     useEffect( ()=>{
         setMovieList( viewedMoiveList );

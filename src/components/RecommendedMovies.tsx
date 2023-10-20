@@ -7,6 +7,7 @@ import "./inner.css";
 // const poster = 'https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_QL75_UX380_CR0,2,380,562_.jpg'
 
 function RecommendedMovies(){
+    console.log( "recommended movies run..." );
     let [MovieList, setMovieList] = useState( [] );
     useEffect(  ()=>{
         let body_section = { 
