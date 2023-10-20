@@ -9,12 +9,12 @@ import MovieCard from "./MovieCard";
 
 function ViewedMovies(){
     console.log( "viewed movies run..." );
-    let [viewedMoiveList , setMovieList] = useState(options.viewedMovieList);
+    let [viewedMoiveList , setMovieList] = useState(import.meta.env.VITE_ViewedMovieList);
     useEffect( ()=>{
-        setMovieList( viewedMoiveList );
+        setMovieList( import.meta.env.VITE_ViewedMovieList );
     }, [ import.meta.env.VITE_ViewedMovieList ] );
 
-    useEffect( ()=> console.log( options.ListAmount, "in viewed movies " ) );
+    // useEffect( ()=> console.log( import.meta.env.VITE_ViewedMovieList, "in viewed movies " ) );
     return <div className="ViGrid">
         { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
     </div>
