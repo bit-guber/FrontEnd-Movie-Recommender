@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <Describe data-bs-theme = "dark"/>
-      <ViewedMovies data-bs-theme = "dark"/>
-      <RecommendedMovies data-bs-theme = "dark"/>
+      {/* <ViewedMovies data-bs-theme = "dark"/>
+      <RecommendedMovies data-bs-theme = "dark"/> */}
     </>
   )
 }
