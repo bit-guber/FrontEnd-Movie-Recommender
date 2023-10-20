@@ -12,6 +12,8 @@ function ViewedMovies(){
     useEffect( ()=>{
         setMovieList( viewedMoiveList );
     }, [ options.ListAmount ] );
+
+    useEffect( ()=> console.log( options.ListAmount, "in viewed movies " ) );
     return <div className="ViGrid">
         { viewedMoiveList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} key={index} /> ) }
     </div>
