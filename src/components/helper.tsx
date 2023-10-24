@@ -16,7 +16,7 @@ const options:{
     },
     
     api_url: "https://recommender-api-vercel.vercel.app/get-list",
-    ViewedMovieList: [ '5' ]
+    ViewedMovieList: [ '862' ]
 };
 
 export default options

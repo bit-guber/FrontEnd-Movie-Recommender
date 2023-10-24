@@ -7,8 +7,9 @@ import options from "./helper";
 // const poster = 'https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_QL75_UX380_CR0,2,380,562_.jpg'
 
 
-function ViewedMovies( props:{viewedmovieState:boolean, updateList:Function} ){
-    console.log( "viewed movies run..." );
+function ViewedMovies( props:{ updateList:Function} ){
+    // console.log( "viewed movies run..." );
+    // let viewedMoiveList = props.viewedMovieList
     // let [viewedMoiveList , setMovieList] = useState(options.ViewedMovieList);
     // useEffect( ()=>{
     //     setMovieList( options.ViewedMovieList );
@@ -16,7 +17,7 @@ function ViewedMovies( props:{viewedmovieState:boolean, updateList:Function} ){
 
     // useEffect( ()=> console.log( import.meta.env.VITE_ViewedMovieList, "in viewed movies " ) );
     return <div className="ViGrid">
-        { options.ViewedMovieList.map( (object, index)=> <MovieCard movie_id={object} viewed={true} updateList={props.updateList} key={index} /> ) }
+        { options.ViewedMovieList.map( (object)=> <MovieCard movie_id={object} viewed={true} updateList={props.updateList} key={object} /> ) }
     </div>
 }
 
