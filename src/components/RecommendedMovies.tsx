@@ -16,6 +16,8 @@ function RecommendedMovies( props:{updateList:Function } ){
                 'Content-Type': 'application/json',
                 'accept': 'application/json'
             },
+            priority: "high"
+
         }
         fetch(options.api_url, body_section )
             .then(Response=>Response.json())

@@ -40,10 +40,12 @@ p.contentitem {
   text-align: center;
 }
 
-.readMore {
-  /* position: relative; */
-  top: 0%;
+h5.contentitem {
+  font-size: small;
+  top:155px;
+  text-align: center;
 }
+
 
 .moviePoster:hover .contentitem{
   visibility: visible;

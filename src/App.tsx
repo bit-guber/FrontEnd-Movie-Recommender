@@ -15,6 +15,10 @@ function App() {
 
     }
     else{
+      if (options.ViewedMovieList.length == 10){
+        options.ViewedMovieList.shift();
+      }
+
       options.ViewedMovieList.push( movie_id );
     }
     
