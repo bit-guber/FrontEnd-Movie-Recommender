@@ -27,9 +27,9 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
                     setposter( `https://image.tmdb.org/t/p/w300${response.poster_path}` );
                     setTitle( response.original_title );
                     setDescribe(  `${response.overview.slice(0, 100)}...` );
-                    let temp = "";
-                    for (let step = 0; step < response.genres.length; step++){
-                        temp+=` ${response.genres[step].name}`;
+                    let temp = response.genres[0].name;
+                    for (let step = 1; step < response.genres.length; step++){
+                        temp+=` | ${response.genres[step].name}`;
                     }
                     setgenres( temp );
                 }
@@ -44,7 +44,7 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
                 <div className="rootitem">
                     <h4 className="contentitem">{title}</h4>
                     <p className="contentitem">{describe}</p>
-                    <h5 className="contentitem">{genres}</h5>
+                    <h6 className="contentitem">{genres}</h6>
                     
                     <div className="contentitem checker">
                         <label className="switch">

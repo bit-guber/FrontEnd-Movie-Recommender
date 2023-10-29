@@ -4,13 +4,13 @@
   overflow: hidden;
 }
 
-.moviePoster:hover {
+.moviePoster:hover, .moviePoster:active{
   scale: 1.5;
   z-index: 2;
   
 }
 
-.moviePoster:hover img{
+.moviePoster:hover img, .moviePoster:active img{
   outline: 100px solid rgba(0, 0, 0, 0.541);
   outline-offset: -100px;
 }
@@ -18,7 +18,7 @@
 .rootitem {
   visibility: hidden;
 }
-.moviePoster:hover .rootitem{
+.moviePoster:hover .rootitem, .moviePoster:active .rootitem{
   visibility: visible;
 }
 
@@ -40,14 +40,14 @@ p.contentitem {
   text-align: center;
 }
 
-h5.contentitem {
+h6.contentitem {
   font-size: small;
-  top:155px;
+  top:165px;
   text-align: center;
 }
 
 
-.moviePoster:hover .contentitem{
+.moviePoster:hover .contentitem, .moviePoster:active .contentitem{
   visibility: visible;
 }
 
