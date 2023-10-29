@@ -44,20 +44,17 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
     return <div className="moviePoster"  >
                 <img id={movie_id} src={poster} width={imageWidth}/>  
                 <div className="rootitem">
-                
                     <a href={infoUrl} target="_blank" rel="noopener noreferrer">
                         <h4 className="contentitem" >{title}</h4>
                         <p className="contentitem">{describe}</p>
                         <h6 className="contentitem">{genres}</h6>
                     </a>
                     <div className="contentitem checker">
-                        
                             <label className="switch">
                                 <input disabled={btnstate} type="checkbox" defaultChecked={viewed} onChange={update_view}/>
                                 <span className="slider round"></span>
                             </label>
-                        
-                        
+                
                     </div>
                 </div>
             </div>

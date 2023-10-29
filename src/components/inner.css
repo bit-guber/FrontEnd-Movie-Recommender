@@ -139,7 +139,7 @@ input:checked + .slider:before {
 
 body{
   background-color: black;
-
+  cursor: default;
 }
 
 .aboutpage{
