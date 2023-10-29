@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import options from "./helper";
-import "./inner.css";
 
 function RecommendedMovies( props:{updateList:Function } ){
     let [MovieList, setMovieList] = useState( [] );

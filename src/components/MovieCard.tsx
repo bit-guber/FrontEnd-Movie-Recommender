@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./inner.css"
 import options from "./helper";
+
 
 
 
@@ -11,7 +11,8 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
     let [describe, setDescribe] = useState( "" );
     let [ genres, setgenres ] = useState( "" );
     let viewed:boolean = props.viewed;
-
+    const imageWidth = viewed ? "150px" : "200px";
+    const infoUrl:string = `https://www.themoviedb.org/movie/${movie_id}`;
     let [btnstate, setbtnstate] = useState( false );
 
     function update_view(){
@@ -26,7 +27,8 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
             .then(response => {
                     setposter( `https://image.tmdb.org/t/p/w300${response.poster_path}` );
                     setTitle( response.original_title );
-                    setDescribe(  `${response.overview.slice(0, 100)}...` );
+                    setDescribe( response.overview );
+                    // setDescribe(  `${response.overview.slice(0, describeLimit)}...` );
                     let temp = response.genres[0].name;
                     for (let step = 1; step < response.genres.length; step++){
                         temp+=` | ${response.genres[step].name}`;
@@ -40,17 +42,22 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
     
 
     return <div className="moviePoster"  >
-                <img id={movie_id} src={poster} width="200px"/>  
+                <img id={movie_id} src={poster} width={imageWidth}/>  
                 <div className="rootitem">
-                    <h4 className="contentitem">{title}</h4>
-                    <p className="contentitem">{describe}</p>
-                    <h6 className="contentitem">{genres}</h6>
-                    
+                
+                    <a href={infoUrl} target="_blank" rel="noopener noreferrer">
+                        <h4 className="contentitem" >{title}</h4>
+                        <p className="contentitem">{describe}</p>
+                        <h6 className="contentitem">{genres}</h6>
+                    </a>
                     <div className="contentitem checker">
-                        <label className="switch">
-                            <input disabled={btnstate} type="checkbox" defaultChecked={viewed} onChange={update_view}/>
-                            <span className="slider round"></span>
-                        </label>
+                        
+                            <label className="switch">
+                                <input disabled={btnstate} type="checkbox" defaultChecked={viewed} onChange={update_view}/>
+                                <span className="slider round"></span>
+                            </label>
+                        
+                        
                     </div>
                 </div>
             </div>

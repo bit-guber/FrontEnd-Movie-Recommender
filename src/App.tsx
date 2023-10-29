@@ -28,8 +28,11 @@ function App() {
   return (
     <>
       <Describe data-bs-theme = "dark"/>
+      <hr></hr>
+      <h2 className="viH">Liked Movie list</h2>
       <ViewedMovies updateList={setList} data-bs-theme = "dark"/>
-      <br></br>
+      <hr></hr>
+      <h2 className="reH">Recommended Movie list</h2>
       <RecommendedMovies updateList={setList} data-bs-theme = "dark"/>
     </>
   )

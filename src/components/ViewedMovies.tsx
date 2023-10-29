@@ -1,4 +1,3 @@
-import "./inner.css"
 import MovieCard from "./MovieCard";
 import options from "./helper";
 

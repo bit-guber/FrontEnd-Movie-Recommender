@@ -26,23 +26,32 @@
   position: absolute;
   color: white;
   width: 100%;
+  cursor: pointer;
 }
 
 
 h4.contentitem {
-  top: 8px;
+  top: 2%;
   text-align: center;
 }
 
 p.contentitem {
-  top:100px;
+  top:22%;
+  left:5%;
+  width: 90%;
+  height: 20%;
   font-size: x-small;
   text-align: center;
+  overflow: hidden; 
+}
+
+p.contentitem:hover {
+  overflow: scroll;
 }
 
 h6.contentitem {
-  font-size: small;
-  top:165px;
+  font-size: x-small;
+  top:45%;
   text-align: center;
 }
 
@@ -54,19 +63,21 @@ h6.contentitem {
 .ViGrid{
   display: grid;
   grid-auto-flow: column dense;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 2rem;
+  padding-left: 45px;
 }
 
 .ReGrid{
   display: grid;
   grid-template-columns:  repeat(auto-fill, 200px);
   grid-gap: 2rem;
-  padding-left: 45px;
+  padding-left: 47px;
 }
 
 div.contentitem.checker{
-  top:225px;
-  transform: translate(70px,0);
+  top:80%;
+  transform: translate(33%,0);
 }
  /* The switch - the box around the slider */
  .switch {
@@ -125,3 +136,32 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 } 
+
+body{
+  background-color: black;
+
+}
+
+.aboutpage{
+  color: white;
+}
+.aboutpage h1{
+  text-align: center;
+}
+.aboutpage p{
+  text-align: center;
+  line-height: 25px;
+}
+.viH{
+  color:cyan;
+  width:max-content;
+  background-size: cover;
+  background-image: url( https://media1.giphy.com/media/l41lHDSvmwnQGDUD6/giphy.gif );
+}
+
+.reH{
+  background-clip: text;
+  color: transparent;
+  background-size: cover;
+  background-image: url( https://media2.giphy.com/media/Qh6aPCssL8J8I/giphy.gif );
+}
