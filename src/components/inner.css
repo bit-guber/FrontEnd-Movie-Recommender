@@ -66,14 +66,17 @@ h6.contentitem {
   grid-template-columns: repeat(auto-fill, 150px);
   grid-gap: 2rem;
   padding-left: 45px;
-  overflow: scroll;
+  overflow: visible;
 }
 
 .ReGrid{
   display: grid;
   grid-template-columns:  repeat(auto-fill, 200px);
   grid-gap: 2rem;
-  padding-left: 47px;
+  padding-left: 2rem;
+  overflow: visible;
+  /* grid-auto-flow: column;
+  grid-auto-columns:auto; */
 }
 
 div.contentitem.checker{
@@ -96,6 +99,8 @@ div.contentitem.checker{
 }
 
 .slider {
+  --dim: 26px;
+  --Padd: 4px;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -108,10 +113,10 @@ div.contentitem.checker{
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: var(--dim);
+  width: var(--dim);
+  left: var(--Padd);
+  bottom: var(--Padd);
   background-color: white;
 }
 
@@ -120,18 +125,18 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 calc(var(--Padd)/4) #2196F3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(var(--dim));
+  -ms-transform: translateX(var(--dim));
+  transform: translateX(var(--dim));
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: calc(var(--dim) + calc( var(--Padd) * 2 ));
 }
 
 .slider.round:before {
@@ -141,6 +146,8 @@ input:checked + .slider:before {
 body{
   background-color: black;
   cursor: default;
+  width:100%;
+  height: 100%;
 }
 
 .aboutpage{
@@ -165,4 +172,9 @@ body{
   color: transparent;
   background-size: cover;
   background-image: url( https://media2.giphy.com/media/Qh6aPCssL8J8I/giphy.gif );
+}
+@media only screen and (hover: none) and (pointer: coarse) {
+  .MovieDBLink {
+    pointer-events: none;
+  }
 }

@@ -44,7 +44,7 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
     return <div className="moviePoster"  >
                 <img id={movie_id} src={poster} width={imageWidth}/>  
                 <div className="rootitem">
-                    <a href={infoUrl} target="_blank" rel="noopener noreferrer">
+                    <a className="MovieDBlink"  href={infoUrl} target="_blank" rel="noopener noreferrer">
                         <h4 className="contentitem" >{title}</h4>
                         <p className="contentitem">{describe}</p>
                         <h6 className="contentitem">{genres}</h6>
