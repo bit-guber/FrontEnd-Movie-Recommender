@@ -38,13 +38,17 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
             )
             .catch( error=> console.log(movie_id, "problem", error) ) 
     }, []);
-    
-    
+    let empty = "";
+    if (screen.orientation.type.includes( "portrait" )){
+        empty = " mobilecom";
+    }
 
-    return <div className="moviePoster"  >
+    // console.log(screen.orientation, "screen orientation");
+
+    return <div className={`moviePoster${empty}`} onClick={()=>{}}   >
                 <img id={movie_id} src={poster} width={imageWidth}/>  
-                <div className="rootitem">
-                    <a className="MovieDBlink"  href={infoUrl} target="_blank" rel="noopener noreferrer">
+                <div className={`rootitem${empty}`}>
+                    <a className="MovieDBLink"  href={infoUrl} target="_blank" rel="noopener noreferrer">
                         <h4 className="contentitem" >{title}</h4>
                         <p className="contentitem">{describe}</p>
                         <h6 className="contentitem">{genres}</h6>
