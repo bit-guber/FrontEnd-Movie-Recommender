@@ -6,12 +6,12 @@ import options from "./helper";
 
 export default function MovieCard( props: { movie_id: string; viewed: boolean, updateList:Function} ){
     const movie_id =props.movie_id;
-    let [poster, setposter] = useState("https://img.freepik.com/free-vector/loading-circles-blue-gradient_78370-2646.jpg?t=st=1697631043~exp=1697631643~hmac=d09c6a37786242f531c13b7ff8c45b8418aae500cec53396ffe87c514239ec70");
+    let [poster, setposter] = useState("https://media1.giphy.com/media/W22b2eea2XxB6DiTWg/giphy.gif");
     let [ title, setTitle ] = useState( "" );
     let [describe, setDescribe] = useState( "" );
     let [ genres, setgenres ] = useState( "" );
     let viewed:boolean = props.viewed;
-    const imageWidth = viewed ? "150px" : "200px";
+    const imageWidth = viewed ? "100px" : "150px";
     const infoUrl:string = `https://www.themoviedb.org/movie/${movie_id}`;
     let [btnstate, setbtnstate] = useState( false );
 
@@ -55,10 +55,10 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
                         <h6 className="contentitem">{genres}</h6>
                     </a>
                     <div className="contentitem checker">
-                            <label className="switch">
-                                <input disabled={btnstate} type="checkbox" defaultChecked={viewed} onChange={update_view}/>
-                                <span className="slider round"></span>
-                            </label>
+                        <label className="switch">
+                            <input disabled={btnstate} type="checkbox" defaultChecked={viewed} onChange={update_view}/>
+                            <span className="slider round"></span>
+                        </label>
                 
                     </div>
                 </div>

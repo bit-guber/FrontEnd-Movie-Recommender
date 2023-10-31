@@ -5,25 +5,23 @@
   overflow: hidden;
 }
 
-.mobilecom {
-  pointer-events:none;
-}
 
 .moviePoster:hover{
   scale: 1.5;
   z-index: 2;
 }
 
-.moviePoster:hover img, .mobilecom img{
+.moviePoster:hover img{
   outline: 100px solid rgba(0, 0, 0, 0.541);
   outline-offset: -100px;
 }
 
 .rootitem {
+  width: 100%;
   /* position: relative; */
   visibility: hidden;
 }
-.moviePoster:hover .rootitem, .mobilecom.rootitem{
+.moviePoster:hover .rootitem{
   visibility: visible;
 }
 
@@ -52,6 +50,7 @@ p.contentitem {
 
 p.contentitem:hover {
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 h6.contentitem {
@@ -64,25 +63,27 @@ h6.contentitem {
 .ViGrid{
   display: grid;
   grid-auto-flow: column dense;
-  grid-template-columns: repeat(auto-fill, 150px);
+  grid-template-columns: repeat(auto-fill, 100px);
   grid-gap: 2rem;
-  padding-left: 45px;
+  justify-content:center;
+  /* padding-left: 45px; */
   overflow: visible;
 }
 
 .ReGrid{
   display: grid;
-  grid-template-columns:  repeat(auto-fill, 200px);
+  grid-template-columns:  repeat(auto-fill, 150px);
   grid-gap: 2rem;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   overflow: visible;
   /* grid-auto-flow: column;
   grid-auto-columns:auto; */
+  justify-content:center;
 }
 
 div.contentitem.checker{
   top:80%;
-  transform: translate(33%,0);
+  transform: translate(25%,0);
 }
  /* The switch - the box around the slider */
  .switch {
@@ -158,8 +159,9 @@ body{
   text-align: center;
 }
 .aboutpage p{
+  font-size: medium;
   text-align: center;
-  line-height: 25px;
+  line-height: 20px;
 }
 .viH{
   color:cyan;
@@ -181,12 +183,4 @@ body{
     /* position: relative; */
     pointer-events: none;
   }
-}
-
-inp {
-  color: black;
-}
-
-inp:focus {
-  color: lightblue;
 }
