@@ -64,7 +64,7 @@ h6.contentitem {
   display: grid;
   grid-auto-flow: column dense;
   grid-template-columns: repeat(auto-fill, 100px);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   justify-content:center;
   /* padding-left: 45px; */
   overflow: visible;
@@ -73,7 +73,7 @@ h6.contentitem {
 .ReGrid{
   display: grid;
   grid-template-columns:  repeat(auto-fill, 150px);
-  grid-gap: 2rem;
+  grid-gap:1rem;
   /* padding-left: 2rem; */
   overflow: visible;
   /* grid-auto-flow: column;

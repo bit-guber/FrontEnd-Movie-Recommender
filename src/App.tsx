@@ -34,6 +34,7 @@ function App() {
       <hr></hr>
       <h2 className="reH">Recommended Movie list</h2>
       <RecommendedMovies updateList={setList} data-bs-theme = "dark"/>
+      <br></br>
     </>
   )
 }
