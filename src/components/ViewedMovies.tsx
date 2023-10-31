@@ -5,7 +5,7 @@ function ViewedMovies( props:{ updateList:Function} ){
     const ViewedMovieList = options.ViewedMovieList;
     if (ViewedMovieList.length == 0){
         return <div className="ViGrid">
-                    <img className="moviePoster" width={"200px"} src="https://recommender-api-vercel.vercel.app/get_image"></img>
+                    <img className="moviePoster" width={"200px"} src="https://topmoviesmm.com/logo.png"></img>
                 </div>
     }else{
         return <div className="ViGrid">
