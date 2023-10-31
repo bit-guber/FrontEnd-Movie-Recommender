@@ -39,9 +39,10 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
             .catch( error=> console.log(movie_id, "problem", error) ) 
     }, []);
     let empty = "";
-    if (screen.orientation.type.includes( "portrait" )){
-        empty = " mobilecom";
-    }
+    
+    // if (browser.mozilla){
+    //     empty = " mobilecom";
+    // }
 
     // console.log(screen.orientation, "screen orientation");
 
