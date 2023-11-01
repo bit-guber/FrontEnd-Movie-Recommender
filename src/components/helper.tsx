@@ -4,7 +4,9 @@ const options:{
     headers: {
         accept: string,
         Authorization: string },
-    priority: string},
+    priority: string
+    },
+    loadingGif:string,
     api_url: string
     ViewedMovieList: string[]
 } = {
@@ -17,6 +19,7 @@ const options:{
         priority: "high"
     },
     
+    loadingGif: "https://media1.giphy.com/media/W22b2eea2XxB6DiTWg/giphy.gif",
     api_url: "https://recommender-api-vercel.vercel.app/get-list",
     ViewedMovieList: []
 };

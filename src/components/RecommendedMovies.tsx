@@ -20,8 +20,10 @@ function shuffle(array:string[]) {
     return array;
   }
 
+const dumpMovieList = Array.from( Array(50).keys() ).map( (value)=>{return value.toString();} );
+
 function RecommendedMovies( props:{updateList:Function } ){
-    let [MovieList, setMovieList] = useState( [] );
+    let [MovieList, setMovieList] = useState(  []  );
     let [ changestate, setchangestate ] = useState( options.ViewedMovieList.length );
     if (options.ViewedMovieList.length != changestate){
         setchangestate(options.ViewedMovieList.length)}
@@ -49,8 +51,14 @@ function RecommendedMovies( props:{updateList:Function } ){
             .catch( error=> console.log("problem recommender", error) ) 
     }, [changestate] );
 
-    return <div className="ReGrid">
-        { MovieList.map( (object)=>  <MovieCard movie_id={object} viewed={false} updateList={props.updateList} key={object} />  ) }
+    if (MovieList.length==0){
+        return <div className="ReGrid">
+                { dumpMovieList.map( (object)=>  <img src={options.loadingGif} width={"150px"} key={object} />  ) }
             </div>
+    }else{
+        return <div className="ReGrid">
+                { MovieList.map( (object)=>  <MovieCard movie_id={object} viewed={false} updateList={props.updateList} key={object} />  ) }
+                </div>
+    }
 }
 export default RecommendedMovies

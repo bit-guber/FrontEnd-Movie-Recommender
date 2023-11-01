@@ -6,7 +6,7 @@ import options from "./helper";
 
 export default function MovieCard( props: { movie_id: string; viewed: boolean, updateList:Function} ){
     const movie_id =props.movie_id;
-    let [poster, setposter] = useState("https://media1.giphy.com/media/W22b2eea2XxB6DiTWg/giphy.gif");
+    let [poster, setposter] = useState(options.loadingGif);
     let [ title, setTitle ] = useState( "" );
     let [describe, setDescribe] = useState( "" );
     let [ genres, setgenres ] = useState( "" );
@@ -28,7 +28,6 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
                     setposter( `https://image.tmdb.org/t/p/w300${response.poster_path}` );
                     setTitle( response.original_title );
                     setDescribe( response.overview );
-                    // setDescribe(  `${response.overview.slice(0, describeLimit)}...` );
                     let temp = response.genres[0].name;
                     for (let step = 1; step < response.genres.length; step++){
                         temp+=` | ${response.genres[step].name}`;
@@ -38,17 +37,10 @@ export default function MovieCard( props: { movie_id: string; viewed: boolean, u
             )
             .catch( error=> console.log(movie_id, "problem", error) ) 
     }, []);
-    let empty = "";
-    
-    // if (browser.mozilla){
-    //     empty = " mobilecom";
-    // }
 
-    // console.log(screen.orientation, "screen orientation");
-
-    return <div className={`moviePoster${empty}`} onClick={()=>{}}   >
+    return <div className="moviePoster" onClick={()=>{}}   >
                 <img id={movie_id} src={poster} width={imageWidth}/>  
-                <div className={`rootitem${empty}`}>
+                <div className="rootitem">
                     <a className="MovieDBLink"  href={infoUrl} target="_blank" rel="noopener noreferrer">
                         <h4 className="contentitem" >{title}</h4>
                         <p className="contentitem">{describe}</p>
