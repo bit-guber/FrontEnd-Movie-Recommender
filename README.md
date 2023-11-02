@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# Frontend Movie Recommendation System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Project accomplish top 50 Movie suggest for user from previously liked movies with quick and efficiently as possible way.<br>
+this project fetch suggest from created API point that source [here](). this only frontend made by [bit_guber](https://github.com/bit-guber/Portfolio) with React + Vite + TypeScript tools.
 
-Currently, two official plugins are available:
+### Currently, How it Works? It follows a few steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Initially Page](#home-page)
+- [Selected a Movie](#watched-and-liked-movie)
+- [ReConfiguring Recommended Page](#recommended-page)
 
-## Expanding the ESLint configuration
+## Home Page
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+There will be Top 100 Popular Movies based on review count each movie in MovieLens [Dataset](https://grouplens.org/datasets/movielens/) which were collected 9,734 movies over various periods of time.<br><br>
+this may be various from real time top movie but focus on dataset is a viral source information.
 
-- Configure the top-level `parserOptions` property like this:
+## Watched and Liked Movie
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Everytime a user select a movie from the list then redirect API point.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Recommended Page
+
+this where API server response come to work, Response contains high probability movies that similar to previous Liked Movie list.<br><br> Actually response produce by The famous SVD Machine learning algorithm based on Matrix Factorization and this same used [Simon Funk](https://sifter.org/~simon/journal/20061211.html) during the Netflix Recommended Engine Prize. also that produce efficient and more relate suggestion.
