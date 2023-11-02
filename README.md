@@ -11,7 +11,7 @@ this project fetch suggest from created API point that source [here](). this onl
 
 ## Home Page
 
-There will be Top 100 Popular Movies based on review count each movie in MovieLens [Dataset](https://grouplens.org/datasets/movielens/) which were collected 9,734 movies over various periods of time.<br><br>
+There will be Top 100 Popular Movies based on reviews count each movie in MovieLens [Dataset](https://grouplens.org/datasets/movielens/) which were collected 9,734 movies over various periods of time.<br><br>
 this may be various from real time top movie but focus on dataset is a viral source information.
 
 ## Watched and Liked Movie

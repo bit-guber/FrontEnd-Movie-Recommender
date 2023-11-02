@@ -20,7 +20,7 @@ function shuffle(array:string[]) {
     return array;
   }
 
-const dumpMovieList = Array.from( Array(50).keys() ).map( (value)=>{return value.toString();} );
+const dumpMovieList = Array.from( Array(100).keys() ).map( (value)=>{return value.toString();} );
 
 function RecommendedMovies( props:{updateList:Function } ){
     let [MovieList, setMovieList] = useState(  []  );
