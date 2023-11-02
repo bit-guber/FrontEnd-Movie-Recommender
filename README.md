@@ -1,7 +1,7 @@
 # Frontend of Movie Recommendation System
 
 This Project accomplish top 50 Movie suggest for user from previously liked movies with quick and efficiently as possible way.<br>
-this project fetch suggest from created API point that source [here](). this only frontend made by [bit_guber](https://github.com/bit-guber/Portfolio) with React + Vite + TypeScript tools.
+this project fetch suggest from created API point that source [here](https://github.com/bit-guber/Movie-Recommender-API). this only frontend made by [bit_guber](https://github.com/bit-guber/Portfolio) with React + Vite + TypeScript tools.
 
 ### Currently, How it Works? It follows a few steps:
 
