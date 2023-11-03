@@ -1,5 +1,5 @@
 // import options from "./helper"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Describe from "./components/Describe";
 import RecommendedMovies from "./components/RecommendedMovies";
 import ViewedMovies from "./components/ViewedMovies";
