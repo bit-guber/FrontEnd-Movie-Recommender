@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   build: {
     target: 'esnext' //browsers can handle the latest ES features
-  }
+  },
   plugins: [react()],
 })
