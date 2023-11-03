@@ -38,7 +38,7 @@ function RecommendedMovies( props:{updateList:Function } ){
             priority: "high"
 
         }
-        fetch(options.api_url, body_section )
+        fetch(options.api_url + "/get-list", body_section )
             .then(Response=>Response.json())
             .then(response => {
                     if (options.ViewedMovieList.length == 0){
