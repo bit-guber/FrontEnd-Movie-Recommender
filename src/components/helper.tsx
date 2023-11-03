@@ -20,7 +20,7 @@ const options:{
     },
     
     loadingGif: "https://media1.giphy.com/media/W22b2eea2XxB6DiTWg/giphy.gif",
-    api_url: "https://bit-guber-movie-recommender.vercel.app",
+    api_url: "https://recommender-api-vercel.vercel.app",
     ViewedMovieList: []
 };
 
