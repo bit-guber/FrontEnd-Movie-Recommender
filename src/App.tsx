@@ -38,6 +38,7 @@ function App() {
     .then(Response=>Response.json())
     .then(response => {
             options.auth_headers.headers.Authorization+=response.token;
+            console.log( "update auth", options.auth_headers.headers.Authorization );
         }
     )
     .catch( error=> console.log("problem lodding api token", error) )
