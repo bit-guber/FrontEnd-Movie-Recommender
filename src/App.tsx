@@ -24,7 +24,24 @@ function App() {
     
     setchangestate(!changestate);
   }
-  
+  useEffect( ()=>{
+
+  let body_section = { 
+    method: "GET",    
+    headers: {
+        'Content-Type': 'application/json',
+        'accept': 'application/json'
+    },
+    priority: "high"
+  }
+  fetch(options.api_url + "/get_auth", body_section )
+    .then(Response=>Response.json())
+    .then(response => {
+            options.auth_headers.headers.Authorization+=response.token;
+        }
+    )
+    .catch( error=> console.log("problem lodding api token", error) )
+  } );
   return (
     <>
       <Describe data-bs-theme = "dark"/>
